@@ -1,3 +1,3 @@
 # Rat Brain Media
 
-Landing page to tease a future yet to unfold.
+Landing site for Rat Brain Media.
