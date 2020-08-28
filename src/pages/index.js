@@ -7,7 +7,6 @@ import Seo from "../components/seo"
 
 const Title = styled.h1`
   margin-top: 0;
-  margin-bottom: 5rem;
   padding: 0 1rem;
   color: #808080;
   text-align: center;

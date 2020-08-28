@@ -3,18 +3,26 @@ import styled, { createGlobalStyle } from "styled-components"
 import { Helmet } from "react-helmet"
 
 const GlobalStyle = createGlobalStyle`
+  
+  :root{
+    @media only screen and (min-width: 600px) {
+      font-size: 18px;
+    }
+  }
+
   body {
     margin: 0;
     padding: 0;
     background-color: black;
   }
+
 `
 
 const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
 `
 
 const Wrapper = styled.div`
