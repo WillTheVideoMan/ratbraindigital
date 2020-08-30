@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Rat Brain Media`,
@@ -16,6 +20,15 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `@willthevideoman/gatsby-plugin-ackee-tracker`,
+      options: {
+        domainId: process.env.ACKEE_DOMAIN_ID,
+        server: process.env.ACKEE_SERVER,
+        ignoreLocalhost: true,
+        detailed: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
