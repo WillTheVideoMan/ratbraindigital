@@ -1,3 +1,3 @@
-# Rat Brain Media
+# Rat Brain Digital
 
-Landing site for Rat Brain Media.
+Landing site for Rat Brain Digital.
