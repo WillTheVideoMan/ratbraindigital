@@ -4,9 +4,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Rat Brain Media`,
+    title: `Rat Brain Digital`,
     description: `Small Brains. Big Ideas.`,
-    author: `@redbrainmedia`,
+    author: `@redbraindigital`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
