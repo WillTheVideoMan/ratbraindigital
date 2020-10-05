@@ -1,5 +1,29 @@
+import React from "react"
 import { action } from "@storybook/addon-actions"
+import { addDecorator } from "@storybook/react"
 import "@storybook/addon-console"
+import Normalise from "../src/styles/Normalise"
+
+// Include global styles with each story.
+addDecorator(s => (
+  <>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      {
+        "\
+        .sb-show-main{\
+          padding: 0 !important\
+        }\
+      "
+      }
+    </style>
+    <Normalise />
+    {s()}
+  </>
+))
 
 // Gatsby's Link overrides:
 // Gatsby Link calls the `enqueue` & `hovering` methods on the global variable ___loader.

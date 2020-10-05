@@ -1,8 +1,9 @@
 import React from "react"
-import styled, { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components"
+import Normalise from "../styles/Normalise"
 import { Helmet } from "react-helmet"
 
-const GlobalStyle = createGlobalStyle`
+const LayoutStyle = createGlobalStyle`
   
   :root{
     @media only screen and (min-width: 600px) {
@@ -18,18 +19,6 @@ const GlobalStyle = createGlobalStyle`
 
 `
 
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-`
-
-const Wrapper = styled.div`
-  width: 100%;
-  max-width: 40rem;
-`
-
 const IndexPage = ({ children }) => (
   <>
     <Helmet>
@@ -38,10 +27,9 @@ const IndexPage = ({ children }) => (
         rel="stylesheet"
       />
     </Helmet>
-    <GlobalStyle />
-    <Container>
-      <Wrapper>{children}</Wrapper>
-    </Container>
+    <Normalise />
+    <LayoutStyle />
+    {children}
   </>
 )
 

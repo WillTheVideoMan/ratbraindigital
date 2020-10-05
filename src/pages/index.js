@@ -1,29 +1,18 @@
 import React from "react"
-import styled from "styled-components"
+import Carousell from "../components/Carousell"
+import Card from "../components/Card"
 
-import Image from "../components/image"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-
-const Title = styled.h1`
-  margin-top: 0;
-  padding: 0 1rem;
-  color: #808080;
-  text-align: center;
-  font-family: "Staatliches", cursive;
-`
-
-const Accent = styled.strong`
-  color: #c50aeb;
-`
+import Layout from "../components/Layout"
+import Seo from "../components/SEO"
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Welcome" />
-    <Image />
-    <Title>
-      Small Brains. <Accent>Big</Accent> Ideas.
-    </Title>
+    <Carousell>
+      <Card title="Card" />
+      <Card title="Card 1" />
+      <Card title="Card 2" />
+    </Carousell>
   </Layout>
 )
 

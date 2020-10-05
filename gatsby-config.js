@@ -12,10 +12,32 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: process.env.AIRTABLE_API_KEY,
+        concurrency: 5,
+        tables: [
+          {
+            baseId: process.env.AIRTABLE_BASE_ID,
+            tableName: `SEO`,
+          },
+          {
+            baseId: process.env.AIRTABLE_BASE_ID,
+            tableName: `Landing`,
+          },
+          {
+            baseId: process.env.AIRTABLE_BASE_ID,
+            tableName: `Portfolio`,
+            mapping: { Image: `fileNode` },
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/images/`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -32,13 +54,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `ratbrain-media`,
-        short_name: `rbm`,
+        name: `ratbraindigital`,
+        short_name: `rbd`,
         start_url: `/`,
         background_color: `#808080`,
         theme_color: `#c50aeb`,
         display: `minimal-ui`,
-        icon: `src/images/ratbrainmedia-logo.png`, // This path is relative to the root of the site.
+        icon: `src/images/ratbraindigital-logo.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
