@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Layout Default Layout 1`] = `
+<div
+  className="sc-bdnylx dPEIjL"
+>
+  <div
+    className="sc-gtssRu gJXAzE"
+  >
+    1
+  </div>
+</div>
+`;
+
+exports[`Storyshots Layout Empty Layout 1`] = `
+<div
+  className="sc-bdnylx dPEIjL"
+>
+  <div
+    className="sc-gtssRu gJXAzE"
+  />
+</div>
+`;
