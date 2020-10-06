@@ -5,6 +5,7 @@ import { SPACING } from "../styles/constants"
 
 const Wrapper = styled.div`
   overflow: hidden;
+  padding: ${SPACING.accent.major};
 `
 const Container = styled.div`
   display: flex;
@@ -22,9 +23,9 @@ const Carousell = ({ children }) => {
   return (
     <Wrapper ref={emblaRef}>
       <Container>
-        {children.map(child => (
-          <Slide>{child}</Slide>
-        ))}
+        {children
+          ? children.map((child, index) => <Slide key={index}>{child}</Slide>)
+          : null}
       </Container>
     </Wrapper>
   )

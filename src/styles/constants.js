@@ -1,30 +1,17 @@
 /**
  * The base line height, units in em;
  */
-const baseLineHeight = 1.5
+const baseLineHeight = 1.666
 
 /**
  * The font scaling parameter. The size of each font is based from the root font size, multiplied by the scaling factor.
  */
-const fontScale = 1.2
+const fontScale = 1.333
 
 const COLOURS = {
-  primary: {
-    light: "black",
-    dark: "white",
-  },
-  accent: {
-    light: "#eee",
-    dark: "#333",
-  },
-  burst: {
-    light: "#900",
-    dark: "#f99",
-  },
-  background: {
-    light: "white",
-    dark: "#111",
-  },
+  primary: "#fff",
+  accent: "#c50beb",
+  background: "#333",
 }
 
 const TYPOGRAPHY = {
@@ -34,7 +21,7 @@ const TYPOGRAPHY = {
   },
   fontSize: {
     heading: {
-      massive: `${Math.pow(fontScale, 4)}rem`,
+      massive: `${Math.pow(fontScale, 5)}rem`,
       primary: `${Math.pow(fontScale, 3)}rem`,
       secondary: `${Math.pow(fontScale, 2)}rem`,
       tertiary: `${Math.pow(fontScale, 1)}rem`,
@@ -45,7 +32,7 @@ const TYPOGRAPHY = {
     },
   },
   lineHeight: {
-    heading: `${baseLineHeight - 0.3}`,
+    heading: `${baseLineHeight - 0.8}`,
     body: `${baseLineHeight}`,
   },
 }

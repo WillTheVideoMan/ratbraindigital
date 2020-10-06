@@ -1,23 +1,7 @@
 import React from "react"
-import { createGlobalStyle } from "styled-components"
 import Normalise from "../styles/Normalise"
+import GlobalStyle from "../styles/GlobalStyle"
 import { Helmet } from "react-helmet"
-
-const LayoutStyle = createGlobalStyle`
-  
-  :root{
-    @media only screen and (min-width: 600px) {
-      font-size: 18px;
-    }
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-    /*background-color: black;*/
-  }
-
-`
 
 const IndexPage = ({ children }) => (
   <>
@@ -28,7 +12,7 @@ const IndexPage = ({ children }) => (
       />
     </Helmet>
     <Normalise />
-    <LayoutStyle />
+    <GlobalStyle />
     {children}
   </>
 )

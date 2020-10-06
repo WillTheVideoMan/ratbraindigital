@@ -3,6 +3,7 @@ import { action } from "@storybook/addon-actions"
 import { addDecorator } from "@storybook/react"
 import "@storybook/addon-console"
 import Normalise from "../src/styles/Normalise"
+import GlobalStyle from "../src/styles/GlobalStyle"
 
 // Include global styles with each story.
 addDecorator(s => (
@@ -21,6 +22,7 @@ addDecorator(s => (
       }
     </style>
     <Normalise />
+    <GlobalStyle />
     {s()}
   </>
 ))
